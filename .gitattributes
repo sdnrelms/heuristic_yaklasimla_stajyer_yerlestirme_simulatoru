@@ -1,0 +1,8 @@
+utils.py linguist-vendored
+
+*.html linguist-detectable=false
+*.html linguist-vendored
+
+*.json linguist-vendored
+
+*.png linguist-vendored
