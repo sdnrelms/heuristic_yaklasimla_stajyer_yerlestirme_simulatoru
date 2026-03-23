@@ -13,8 +13,7 @@ Sudenur Elmas · Hasna Şahinoğlu
 - [Özellikler](#-özellikler)
 - [Kurulum](#-kurulum)
 - [Kullanım](#-kullanım)
-- [Algoritmaların Açıklaması](#-algoritmaların-açıklaması)
-  - [Greedy Algoritma](#greedy-algoritma)
+- [Algoritma Açıklaması](#-algoritma-açıklaması)
   - [Heuristic (Beam Search) Algoritma](#heuristic-beam-search-algoritma)
 - [Problem Modeli](#-problem-modeli)
   - [Memnuniyet Skoru Fonksiyonu](#memnuniyet-skoru-fonksiyonu)
@@ -22,8 +21,6 @@ Sudenur Elmas · Hasna Şahinoğlu
 - [Deneysel Sonuçlar](#-deneysel-sonuçlar)
 - [GUI ve Görselleştirme](#-gui-ve-görselleştirme)
 - [Proje Yapısı](#-proje-yapısı)
-- [Katkıda Bulunma](#-katkıda-bulunma)
-- [Lisans](#-lisans)
 
 ---
 
@@ -212,6 +209,8 @@ Tüm deneyler **50 bağımsız tekrar** ile gerçekleştirilmiş; sonuçlar orta
 
 **Sonuç:** Greedy büyük ölçekli senaryolarda hız avantajı sunar; Heuristic çözüm kalitesi için ek hesaplama maliyetini göze alır.
 
+![olcek](./screanshots/olceklenebilirlik.png)
+
 ### Senaryo 2: Sosyal Etki (Grup Oranı – Ortalama Memnuniyet)
 
 - **Greedy**: Grup oranı arttıkça memnuniyet puanı sınırlı bir artış gösterir. Sosyal bilgi yerleştirme kararlarını etkilemez.
@@ -219,13 +218,15 @@ Tüm deneyler **50 bağımsız tekrar** ile gerçekleştirilmiş; sonuçlar orta
 
 **Sonuç:** Sosyal faktörlerin güçlü olduğu ortamlarda Heuristic yaklaşım belirgin üstünlük sağlar.
 
+![sosyal](./screanshots/sosyal_baglar_grafik.png)
+
 ### Senaryo 3: Beam Width – Toplam Memnuniyet
 
 - Beam Width arttıkça toplam memnuniyet skoru yükselir.
 - `BW = 40` sonrasında anlamlı bir artış gözlemlenmez.
 - **Optimum aralık: `20–40`**
 
----
+## ![beam](./screanshots/beam_width.png)
 
 ## 🖥️ GUI ve Görselleştirme
 
@@ -238,6 +239,8 @@ Tüm deneyler **50 bağımsız tekrar** ile gerçekleştirilmiş; sonuçlar orta
 | **Firma Kontenjan Durumu**    | Doluluk oranları, eşik değerleri (yeşil: müsait, gri: dolu)                 |
 | **Red Alanlar & Bekleyenler** | Reddedilen öğrenciler ve güncel red tercih listesi                          |
 | **Yerleşenler**               | Kalıcı atamalar: iterasyon, tercih sırası, memnuniyet puanı, arkadaş sayısı |
+
+![gui](./screanshots/gui.png)
 
 ### D3.js Beam Search Ağaç Görselleştirmesi
 
@@ -252,7 +255,7 @@ Heuristic algoritmanın karar uzayını web tabanlı olarak görselleştirir. `g
 - 🟠 **Turuncu düğüm**: Tur başlangıcı
 - 💬 **Tooltip**: Fare ile üzerine gelindiğinde anlık skor ve log detayı
 
----
+## ![beam](./screanshots/beam_tree.png)
 
 ## 📁 Proje Yapısı
 
